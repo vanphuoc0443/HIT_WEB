@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="Tài liệu lớp HIT Web Private 2026: lộ trình 14 tuần, lý thuyết và ví dụ thực hành."><title>Tuần 2: HTML cơ bản, Semantic HTML, HTML Form, bảng, liên kết, hình ảnh · HIT Web Private 2026</title><link rel="stylesheet" href="../assets/site.css"><script src="../assets/site.js" defer></script></head>
+<body><a class="skip" href="#content">Đến nội dung chính</a><header class="header"><a class="brand" href="../index.html"><span class="logo">HIT</span><span>HIT <strong>WEB PRIVATE</strong><small>HỌC CÙNG NHAU · 2026</small></span></a><div class="header-actions"><a class="repo" href="https://github.com/thienbao28287/WEB_PRIVATE_2026">Repository ↗</a><button id="theme" type="button" aria-label="Chuyển giao diện sáng tối">☼</button></div></header>
+<div class="layout"><aside class="sidebar"><a class="course-home" href="../index.html">← Tổng quan khóa học</a><div class="sidebar-title"><h2>Lộ trình học</h2><span>14 tuần</span></div><p class="sidebar-note">Từ những dòng code đầu tiên.</p><nav aria-label="Danh sách tuần"><a class="week " href="../Lesson1/README.html" ><span class="week-number">01</span><span><b>Tuần 1</b><span>Cài IDE, Extensions, Git/GitHub, Tổng quan HTML/CSS/JS</span></span><span class="status ready" aria-label="Có lý thuyết"></span></a><a class="week active" href="../Lesson2/README.html" aria-current="page"><span class="week-number">02</span><span><b>Tuần 2</b><span>HTML cơ bản, Semantic HTML, HTML Form, bảng, liên kết, hình ảnh</span></span><span class="status ready" aria-label="Có lý thuyết"></span></a><a class="week " href="../Lesson3/README.html" ><span class="week-number">03</span><span><b>Tuần 3</b><span>CSS cơ bản, selector, cascade, specificity, BEM</span></span><span class="status " aria-label="Chưa có nội dung"></span></a><a class="week " href="../Lesson4/README.html" ><span class="week-number">04</span><span><b>Tuần 4</b><span>Box model, đơn vị CSS, typography, nhúng icon và font</span></span><span class="status " aria-label="Chưa có nội dung"></span></a><a class="week " href="../Lesson5/README.html" ><span class="week-number">05</span><span><b>Tuần 5</b><span>Flexbox, Position, Grid, Responsive Design</span></span><span class="status " aria-label="Chưa có nội dung"></span></a><a class="week " href="../Lesson6/README.html" ><span class="week-number">06</span><span><b>Tuần 6</b><span>Kiểm tra</span></span><span class="status " aria-label="Chưa có nội dung"></span></a><a class="week " href="../Lesson7/README.html" ><span class="week-number">07</span><span><b>Tuần 7</b><span>JavaScript, biến, kiểu dữ liệu, toán tử, rẽ nhánh, vòng lặp</span></span><span class="status " aria-label="Chưa có nội dung"></span></a><a class="week " href="../Lesson8/README.html" ><span class="week-number">08</span><span><b>Tuần 8</b><span>Function, phạm vi biến và hoisting cơ bản</span></span><span class="status " aria-label="Chưa có nội dung"></span></a><a class="week " href="../Lesson9/README.html" ><span class="week-number">09</span><span><b>Tuần 9</b><span>Array, Object, các phương thức xử lý dữ liệu</span></span><span class="status " aria-label="Chưa có nội dung"></span></a><a class="week " href="../Lesson10/README.html" ><span class="week-number">10</span><span><b>Tuần 10</b><span>Destructuring, Spread/Rest, DOM và Event</span></span><span class="status " aria-label="Chưa có nội dung"></span></a><a class="week " href="../Lesson11/README.html" ><span class="week-number">11</span><span><b>Tuần 11</b><span>Thực hành</span></span><span class="status " aria-label="Chưa có nội dung"></span></a><a class="week " href="../Lesson12/README.html" ><span class="week-number">12</span><span><b>Tuần 12</b><span>Callback, Promise, async/await, Fetch API</span></span><span class="status " aria-label="Chưa có nội dung"></span></a><a class="week " href="../Lesson13/README.html" ><span class="week-number">13</span><span><b>Tuần 13</b><span>Thực hành</span></span><span class="status " aria-label="Chưa có nội dung"></span></a><a class="week " href="../Lesson14/README.html" ><span class="week-number">14</span><span><b>Tuần 14</b><span>Ôn tập và giải đáp thắc mắc</span></span><span class="status " aria-label="Chưa có nội dung"></span></a></nav><div class="sidebar-footer"><span class="status ready"></span> 2 tuần đã có tài liệu</div></aside><main id="content" tabindex="-1"><div class="breadcrumb"><a href="../index.html">Lộ trình</a><span>/</span> Tuần 02</div><header class="lesson-header"><span class="eyebrow">HIT WEB PRIVATE 2026 · TUẦN 02</span><h1>HTML cơ bản, Semantic HTML, HTML Form, bảng, liên kết, hình ảnh</h1><div class="lesson-meta"><span>Lý thuyết & ví dụ</span><a href="https://github.com/thienbao28287/WEB_PRIVATE_2026/blob/main/Lesson2/theory.md">Đọc Markdown ↗</a></div></header><article class="prose"><h2 id="muc-1">I. HTML là gì?</h2>
+<ul>
+<li>HTML (HyperText Markup Language) là ngôn ngữ đánh dấu siêu văn bản, dùng để xây dựng cấu trúc của một trang web.</li>
+<li>HTML không phải là ngôn ngữ lập trình (programming language), mà là ngôn ngữ đánh dấu (markup language).</li>
+<li>HTML mô tả các phần tử (elements) trên trang web như tiêu đề, đoạn văn, hình ảnh, liên kết, bảng và biểu mẫu.</li>
+</ul>
+<p>Nói đơn giản, HTML là bộ khung xương của website.</p>
+<h3 id="muc-2">Viết HTML ở đâu?</h3>
+<ul>
+<li>Bạn có thể viết HTML bằng trình soạn thảo như Visual Studio Code.</li>
+<li>Tệp văn bản thông thường có thể có phần mở rộng <code>.txt</code>. Để lưu mã HTML thành tài liệu HTML, sử dụng phần mở rộng <code>.html</code>, ví dụ <code>index.html</code>.</li>
+<li>Mở file HTML bằng trình duyệt hoặc chạy bằng Live Server để xem kết quả.</li>
+</ul>
+<h2 id="muc-3">II. Cấu trúc cơ bản của một file HTML</h2>
+<div class="code-block"><div class="code-toolbar"><span>html</span><button class="copy" type="button">Sao chép</button></div><pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;vi&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Trang web đầu tiên&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Xin chào!&lt;/h1&gt;
+    &lt;p&gt;Đây là trang web đầu tiên của tôi.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre></div>
+<div class="table-wrap"><table><thead><tr><th scope="col"> Thành phần</th><th scope="col">Ý nghĩa </th></tr></thead><tbody>
+<tr><td> <code>&lt;!DOCTYPE html&gt;</code></td><td>Khai báo tài liệu sử dụng HTML5; đây không phải là một thẻ HTML. </td></tr>
+<tr><td> <code>&lt;html&gt;</code></td><td>Phần tử gốc bao bọc tài liệu HTML. Thuộc tính <code>lang=&quot;vi&quot;</code> xác định ngôn ngữ chính là tiếng Việt; dùng <code>lang=&quot;en&quot;</code> cho tiếng Anh. </td></tr>
+<tr><td> <code>&lt;head&gt;</code></td><td>Chứa thông tin về trang như metadata, tiêu đề và liên kết đến tài nguyên CSS. </td></tr>
+<tr><td> <code>&lt;meta charset=&quot;UTF-8&quot;&gt;</code></td><td>Thiết lập bảng mã UTF-8 để hiển thị tiếng Việt và các ký tự khác. </td></tr>
+<tr><td> <code>&lt;meta name=&quot;viewport&quot; ...&gt;</code></td><td>Thiết lập vùng hiển thị để trang phù hợp với chiều rộng thiết bị. </td></tr>
+<tr><td> <code>&lt;title&gt;</code></td><td>Chỉ định tiêu đề trang, thường hiển thị trên tab trình duyệt. </td></tr>
+<tr><td> <code>&lt;body&gt;</code></td><td>Chứa nội dung hiển thị của trang như tiêu đề, văn bản, hình ảnh và biểu mẫu. </td></tr>
+</tbody></table></div>
+<h2 id="muc-4">III. Các thẻ cần biết</h2>
+<p><strong>Cách chạy ví dụ:</strong> Tạo file <code>index.html</code> theo cấu trúc ở phần II, thay nội dung bên trong <code>&lt;body&gt;</code> bằng từng ví dụ rồi mở bằng Live Server. Riêng ví dụ CSS và JavaScript ở mục 8 có hướng dẫn vị trí đặt mã riêng.</p>
+<h3 id="muc-5">1. Thẻ ngữ nghĩa (Semantic HTML)</h3>
+<p>Thẻ ngữ nghĩa thể hiện vai trò của nội dung, giúp cấu trúc trang dễ hiểu hơn đối với người đọc mã, trình duyệt và công cụ hỗ trợ tiếp cận.</p>
+<div class="table-wrap"><table><thead><tr><th scope="col"> Thẻ</th><th scope="col">Tác dụng </th></tr></thead><tbody>
+<tr><td> <code>&lt;header&gt;</code></td><td>Phần giới thiệu hoặc phần đầu của trang hay một khu vực nội dung. </td></tr>
+<tr><td> <code>&lt;nav&gt;</code></td><td>Khu vực chứa các liên kết điều hướng chính. </td></tr>
+<tr><td> <code>&lt;main&gt;</code></td><td>Nội dung chính của trang. </td></tr>
+<tr><td> <code>&lt;section&gt;</code></td><td>Nhóm nội dung theo một chủ đề, thường có tiêu đề. </td></tr>
+<tr><td> <code>&lt;article&gt;</code></td><td>Nội dung độc lập như bài viết hoặc tin tức. </td></tr>
+<tr><td> <code>&lt;aside&gt;</code></td><td>Nội dung liên quan bổ sung, thường dùng cho thanh bên (sidebar). </td></tr>
+<tr><td> <code>&lt;footer&gt;</code></td><td>Phần cuối của trang hoặc một khu vực nội dung. </td></tr>
+<tr><td> <code>&lt;figure&gt;</code> và <code>&lt;figcaption&gt;</code></td><td>Nhóm nội dung minh họa như hình ảnh, kèm chú thích. </td></tr>
+</tbody></table></div>
+<p><strong>Ví dụ: Bố cục trang giới thiệu câu lạc bộ</strong></p>
+<div class="code-block"><div class="code-toolbar"><span>html</span><button class="copy" type="button">Sao chép</button></div><pre><code>&lt;header&gt;
+    &lt;h1&gt;Câu lạc bộ lập trình&lt;/h1&gt;
+    &lt;nav&gt;
+        &lt;a href=&quot;#gioi-thieu&quot;&gt;Giới thiệu&lt;/a&gt;
+        &lt;a href=&quot;#bai-viet&quot;&gt;Bài viết&lt;/a&gt;
+    &lt;/nav&gt;
+&lt;/header&gt;
+
+&lt;main&gt;
+    &lt;section id=&quot;gioi-thieu&quot;&gt;
+        &lt;h2&gt;Giới thiệu&lt;/h2&gt;
+        &lt;p&gt;Nơi cùng nhau học và thực hành lập trình web.&lt;/p&gt;
+    &lt;/section&gt;
+
+    &lt;section id=&quot;bai-viet&quot;&gt;
+        &lt;h2&gt;Bài viết mới&lt;/h2&gt;
+        &lt;article&gt;
+            &lt;h3&gt;Buổi học HTML đầu tiên&lt;/h3&gt;
+            &lt;p&gt;Hôm nay chúng mình học cách tạo cấu trúc trang web.&lt;/p&gt;
+        &lt;/article&gt;
+    &lt;/section&gt;
+
+    &lt;aside&gt;
+        &lt;h2&gt;Thông báo&lt;/h2&gt;
+        &lt;p&gt;Chuẩn bị laptop cho buổi thực hành tiếp theo.&lt;/p&gt;
+    &lt;/aside&gt;
+&lt;/main&gt;
+
+&lt;footer&gt;
+    &lt;p&gt;Liên hệ: clb@example.com&lt;/p&gt;
+&lt;/footer&gt;</code></pre></div>
+<p><strong>Kết quả:</strong> Trang hiển thị phần giới thiệu, bài viết, thông báo và thông tin liên hệ. Nhấn liên kết trong menu để chuyển tới khu vực có <code>id</code> tương ứng. Các thẻ ngữ nghĩa không tự tạo bố cục nhiều cột; <code>&lt;aside&gt;</code> chỉ trở thành thanh bên về mặt giao diện khi được bố trí bằng CSS. Ví dụ <code>&lt;figure&gt;</code> và <code>&lt;figcaption&gt;</code> nằm ở mục 4.</p>
+<h3 id="muc-6">2. Thẻ tiêu đề và văn bản</h3>
+<div class="table-wrap"><table><thead><tr><th scope="col"> Thẻ</th><th scope="col">Tác dụng </th></tr></thead><tbody>
+<tr><td> <code>&lt;h1&gt;</code> đến <code>&lt;h6&gt;</code></td><td>Tiêu đề theo cấp độ từ 1 đến 6; <code>&lt;h1&gt;</code> có cấp cao nhất. Kích thước hiển thị có thể thay đổi bằng CSS. </td></tr>
+<tr><td> <code>&lt;p&gt;</code></td><td>Đoạn văn bản. </td></tr>
+<tr><td> <code>&lt;br&gt;</code></td><td>Ngắt dòng trong văn bản. </td></tr>
+<tr><td> <code>&lt;hr&gt;</code></td><td>Thể hiện sự chuyển chủ đề, mặc định thường hiển thị bằng đường kẻ ngang. </td></tr>
+<tr><td> <code>&lt;span&gt;</code></td><td>Phần tử bao bọc nội dung nhỏ trong dòng, không mang ý nghĩa ngữ nghĩa riêng. </td></tr>
+<tr><td> <code>&lt;div&gt;</code></td><td>Phần tử bao bọc nội dung dạng khối, không mang ý nghĩa ngữ nghĩa riêng. </td></tr>
+</tbody></table></div>
+<p><strong>Ví dụ:</strong></p>
+<div class="code-block"><div class="code-toolbar"><span>html</span><button class="copy" type="button">Sao chép</button></div><pre><code>&lt;h1&gt;Cẩm nang học web&lt;/h1&gt;
+&lt;h2&gt;Chương 1: HTML&lt;/h2&gt;
+&lt;h3&gt;Bài 1: Văn bản&lt;/h3&gt;
+&lt;h4&gt;Phần 1: Tiêu đề&lt;/h4&gt;
+&lt;h5&gt;Mục nhỏ: Cấp độ tiêu đề&lt;/h5&gt;
+&lt;h6&gt;Ghi chú trong mục nhỏ&lt;/h6&gt;
+
+&lt;div&gt;
+    &lt;p&gt;Tôi đang học &lt;span&gt;HTML cơ bản&lt;/span&gt;.&lt;/p&gt;
+    &lt;p&gt;Địa điểm học:&lt;br&gt;Phòng thực hành số 1.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;hr&gt;
+&lt;p&gt;Tiếp theo là phần định dạng văn bản.&lt;/p&gt;</code></pre></div>
+<p><strong>Kết quả:</strong> Các tiêu đề mặc định có kích thước khác nhau; <code>&lt;br&gt;</code> ngắt dòng trước tên phòng, còn <code>&lt;hr&gt;</code> tạo dấu phân cách giữa hai chủ đề. <code>&lt;div&gt;</code> nhóm nội dung và <code>&lt;span&gt;</code> bao một cụm từ, nhưng chưa tạo hiệu ứng riêng khi chưa có CSS. Chọn cấp tiêu đề theo cấu trúc nội dung, không chỉ theo kích thước chữ mong muốn.</p>
+<h3 id="muc-7">3. Thẻ định dạng văn bản</h3>
+<div class="table-wrap"><table><thead><tr><th scope="col"> Thẻ</th><th scope="col">Tác dụng </th></tr></thead><tbody>
+<tr><td> <code>&lt;b&gt;</code></td><td>Thu hút sự chú ý vào văn bản, mặc định thường hiển thị in đậm. </td></tr>
+<tr><td> <code>&lt;strong&gt;</code></td><td>Thể hiện nội dung quan trọng, mặc định thường hiển thị in đậm. </td></tr>
+<tr><td> <code>&lt;i&gt;</code></td><td>Đánh dấu văn bản có giọng điệu hoặc tính chất khác, chẳng hạn thuật ngữ; mặc định thường in nghiêng. </td></tr>
+<tr><td> <code>&lt;em&gt;</code></td><td>Nhấn mạnh nội dung, mặc định thường hiển thị in nghiêng. </td></tr>
+<tr><td> <code>&lt;u&gt;</code></td><td>Đánh dấu văn bản có chú giải phi văn bản, mặc định thường gạch dưới. </td></tr>
+<tr><td> <code>&lt;mark&gt;</code></td><td>Đánh dấu nội dung có liên quan cần làm nổi bật trong ngữ cảnh. </td></tr>
+<tr><td> <code>&lt;small&gt;</code></td><td>Thông tin phụ như chú thích hoặc bản quyền, mặc định thường có cỡ chữ nhỏ hơn. </td></tr>
+<tr><td> <code>&lt;del&gt;</code></td><td>Nội dung đã bị xóa, mặc định thường hiển thị gạch ngang chữ. </td></tr>
+</tbody></table></div>
+<p><strong>Ví dụ:</strong></p>
+<div class="code-block"><div class="code-toolbar"><span>html</span><button class="copy" type="button">Sao chép</button></div><pre><code>&lt;p&gt;Từ khóa cần chú ý: &lt;b&gt;HTML&lt;/b&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Quan trọng: Hãy lưu bài trước khi đóng VS Code.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Thuật ngữ tiếng Anh: &lt;i&gt;markup language&lt;/i&gt;.&lt;/p&gt;
+&lt;p&gt;Hãy &lt;em&gt;tự viết lại&lt;/em&gt; ví dụ để hiểu bài.&lt;/p&gt;
+&lt;p&gt;Từ cần sửa chính tả: &lt;u&gt;lặp chình&lt;/u&gt;.&lt;/p&gt;
+&lt;p&gt;Buổi này tập trung vào &lt;mark&gt;cấu trúc HTML&lt;/mark&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;small&gt;Ví dụ dành cho người mới bắt đầu.&lt;/small&gt;&lt;/p&gt;
+&lt;p&gt;Lịch học cũ: &lt;del&gt;Thứ Ba&lt;/del&gt;. Lịch mới: Thứ Năm.&lt;/p&gt;</code></pre></div>
+<p><strong>Kết quả:</strong> Bạn sẽ thấy chữ đậm, nghiêng, gạch dưới, tô nổi bật, chữ nhỏ và chữ bị gạch bỏ. <code>&lt;b&gt;</code> và <code>&lt;strong&gt;</code> thường trông giống nhau nhưng khác ý nghĩa; tương tự với <code>&lt;i&gt;</code> và <code>&lt;em&gt;</code>.</p>
+<h3 id="muc-8">4. Thẻ liên kết và hình ảnh</h3>
+<div class="table-wrap"><table><thead><tr><th scope="col"> Thẻ</th><th scope="col">Tác dụng </th></tr></thead><tbody>
+<tr><td> <code>&lt;a&gt;</code></td><td>Tạo liên kết; thuộc tính <code>href</code> chỉ định địa chỉ đích. </td></tr>
+<tr><td> <code>&lt;img&gt;</code></td><td>Hiển thị hình ảnh; <code>src</code> chỉ định đường dẫn và <code>alt</code> cung cấp văn bản thay thế. </td></tr>
+</tbody></table></div>
+<div class="code-block"><div class="code-toolbar"><span>html</span><button class="copy" type="button">Sao chép</button></div><pre><code>&lt;a href=&quot;https://github.com&quot;&gt;Truy cập GitHub&lt;/a&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;img/avatar.png&quot; alt=&quot;Ảnh đại diện của tôi&quot; width=&quot;200&quot;&gt;
+    &lt;figcaption&gt;Ảnh đại diện trên trang giới thiệu bản thân.&lt;/figcaption&gt;
+&lt;/figure&gt;</code></pre></div>
+<p><strong>Chuẩn bị:</strong> Tạo thư mục <code>img</code> cùng cấp với <code>index.html</code>, sau đó đặt ảnh của bạn vào đó với tên <code>avatar.png</code> hoặc sửa <code>src</code> cho khớp tên ảnh thực tế.</p>
+<p><strong>Kết quả:</strong> Liên kết mở trang GitHub; ảnh hiển thị với chiều rộng 200 pixel và có chú thích bên dưới. <code>alt</code> mô tả ảnh cho công cụ hỗ trợ tiếp cận và có thể hiển thị khi không tải được ảnh.</p>
+<h3 id="muc-9">5. Thẻ danh sách</h3>
+<div class="table-wrap"><table><thead><tr><th scope="col"> Thẻ</th><th scope="col">Tác dụng </th></tr></thead><tbody>
+<tr><td> <code>&lt;ul&gt;</code></td><td>Danh sách không có thứ tự, mặc định dùng dấu đầu dòng. </td></tr>
+<tr><td> <code>&lt;ol&gt;</code></td><td>Danh sách có thứ tự, mặc định đánh số. </td></tr>
+<tr><td> <code>&lt;li&gt;</code></td><td>Một mục trong danh sách. </td></tr>
+</tbody></table></div>
+<p><strong>Ví dụ:</strong></p>
+<div class="code-block"><div class="code-toolbar"><span>html</span><button class="copy" type="button">Sao chép</button></div><pre><code>&lt;h2&gt;Sở thích của tôi&lt;/h2&gt;
+&lt;ul&gt;
+    &lt;li&gt;Lập trình&lt;/li&gt;
+    &lt;li&gt;Đọc sách&lt;/li&gt;
+    &lt;li&gt;Chơi thể thao&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;Các bước chạy trang web&lt;/h2&gt;
+&lt;ol&gt;
+    &lt;li&gt;Mở thư mục dự án bằng VS Code.&lt;/li&gt;
+    &lt;li&gt;Tạo và lưu file index.html.&lt;/li&gt;
+    &lt;li&gt;Mở trang bằng Live Server.&lt;/li&gt;
+&lt;/ol&gt;</code></pre></div>
+<p><strong>Kết quả:</strong> Sở thích được hiển thị bằng dấu đầu dòng; các bước thực hiện được đánh số theo thứ tự. Mỗi mục là một thẻ <code>&lt;li&gt;</code> nằm trong <code>&lt;ul&gt;</code> hoặc <code>&lt;ol&gt;</code>.</p>
+<h3 id="muc-10">6. Thẻ bảng (Table)</h3>
+<div class="table-wrap"><table><thead><tr><th scope="col"> Thẻ</th><th scope="col">Tác dụng </th></tr></thead><tbody>
+<tr><td> <code>&lt;table&gt;</code></td><td>Tạo bảng dữ liệu. </td></tr>
+<tr><td> <code>&lt;tr&gt;</code></td><td>Một hàng trong bảng. </td></tr>
+<tr><td> <code>&lt;td&gt;</code></td><td>Một ô dữ liệu. </td></tr>
+<tr><td> <code>&lt;th&gt;</code></td><td>Một ô tiêu đề. </td></tr>
+<tr><td> <code>&lt;thead&gt;</code>, <code>&lt;tbody&gt;</code>, <code>&lt;tfoot&gt;</code></td><td>Nhóm các hàng thuộc phần đầu, phần thân và phần cuối của bảng. </td></tr>
+</tbody></table></div>
+<p><strong>Ví dụ: Bảng thời khóa biểu</strong></p>
+<div class="code-block"><div class="code-toolbar"><span>html</span><button class="copy" type="button">Sao chép</button></div><pre><code>&lt;table&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th scope=&quot;col&quot;&gt;Buổi&lt;/th&gt;
+            &lt;th scope=&quot;col&quot;&gt;Nội dung&lt;/th&gt;
+            &lt;th scope=&quot;col&quot;&gt;Thời lượng&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;th scope=&quot;row&quot;&gt;Buổi 1&lt;/th&gt;
+            &lt;td&gt;Cài đặt công cụ và Git&lt;/td&gt;
+            &lt;td&gt;2 giờ&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;th scope=&quot;row&quot;&gt;Buổi 2&lt;/th&gt;
+            &lt;td&gt;HTML cơ bản&lt;/td&gt;
+            &lt;td&gt;2 giờ&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+    &lt;tfoot&gt;
+        &lt;tr&gt;
+            &lt;th scope=&quot;row&quot; colspan=&quot;2&quot;&gt;Tổng thời lượng&lt;/th&gt;
+            &lt;td&gt;4 giờ&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tfoot&gt;
+&lt;/table&gt;</code></pre></div>
+<p><strong>Kết quả:</strong> Bảng có ba cột, hai hàng dữ liệu và một hàng tổng kết. <code>colspan=&quot;2&quot;</code> giúp ô tổng kết chiếm hai cột; <code>scope</code> xác định ô tiêu đề áp dụng cho hàng hay cột. Bảng chưa có đường viền khi chưa thêm CSS.</p>
+<h3 id="muc-11">7. Thẻ biểu mẫu (Form)</h3>
+<div class="table-wrap"><table><thead><tr><th scope="col"> Thẻ</th><th scope="col">Tác dụng </th></tr></thead><tbody>
+<tr><td> <code>&lt;form&gt;</code></td><td>Tạo biểu mẫu thu thập dữ liệu. </td></tr>
+<tr><td> <code>&lt;input&gt;</code></td><td>Tạo điều khiển nhập liệu với các kiểu như <code>text</code>, <code>email</code>, <code>password</code>, <code>checkbox</code>, <code>radio</code>… </td></tr>
+<tr><td> <code>&lt;textarea&gt;</code></td><td>Ô nhập văn bản nhiều dòng. </td></tr>
+<tr><td> <code>&lt;select&gt;</code> và <code>&lt;option&gt;</code></td><td>Tạo danh sách lựa chọn, thường hiển thị dạng dropdown. </td></tr>
+<tr><td> <code>&lt;button&gt;</code></td><td>Tạo nút bấm. </td></tr>
+<tr><td> <code>&lt;label&gt;</code></td><td>Nhãn mô tả trường nhập liệu; có thể dùng <code>for</code> trùng với <code>id</code> của trường để liên kết chúng. </td></tr>
+<tr><td> <code>&lt;fieldset&gt;</code> và <code>&lt;legend&gt;</code></td><td>Nhóm các trường liên quan và đặt tiêu đề cho nhóm. </td></tr>
+</tbody></table></div>
+<p><strong>Ví dụ: Form đăng ký học web</strong></p>
+<div class="code-block"><div class="code-toolbar"><span>html</span><button class="copy" type="button">Sao chép</button></div><pre><code>&lt;form&gt;
+    &lt;fieldset&gt;
+        &lt;legend&gt;Thông tin đăng ký&lt;/legend&gt;
+
+        &lt;p&gt;
+            &lt;label for=&quot;full-name&quot;&gt;Họ và tên:&lt;/label&gt;
+            &lt;input type=&quot;text&quot; id=&quot;full-name&quot; name=&quot;fullName&quot; required&gt;
+        &lt;/p&gt;
+
+        &lt;p&gt;
+            &lt;label for=&quot;email&quot;&gt;Email:&lt;/label&gt;
+            &lt;input type=&quot;email&quot; id=&quot;email&quot; name=&quot;email&quot; required&gt;
+        &lt;/p&gt;
+
+        &lt;p&gt;
+            &lt;label for=&quot;password&quot;&gt;Mật khẩu mẫu:&lt;/label&gt;
+            &lt;input type=&quot;password&quot; id=&quot;password&quot; name=&quot;password&quot; minlength=&quot;6&quot;&gt;
+        &lt;/p&gt;
+
+        &lt;p&gt;
+            &lt;label for=&quot;level&quot;&gt;Trình độ:&lt;/label&gt;
+            &lt;select id=&quot;level&quot; name=&quot;level&quot;&gt;
+                &lt;option value=&quot;beginner&quot;&gt;Mới bắt đầu&lt;/option&gt;
+                &lt;option value=&quot;basic&quot;&gt;Đã biết cơ bản&lt;/option&gt;
+            &lt;/select&gt;
+        &lt;/p&gt;
+
+        &lt;p&gt;Ca học mong muốn:&lt;/p&gt;
+        &lt;label&gt;&lt;input type=&quot;radio&quot; name=&quot;session&quot; value=&quot;morning&quot;&gt; Buổi sáng&lt;/label&gt;
+        &lt;label&gt;&lt;input type=&quot;radio&quot; name=&quot;session&quot; value=&quot;evening&quot;&gt; Buổi tối&lt;/label&gt;
+
+        &lt;p&gt;
+            &lt;label for=&quot;note&quot;&gt;Ghi chú:&lt;/label&gt;
+            &lt;textarea id=&quot;note&quot; name=&quot;note&quot; rows=&quot;3&quot;&gt;&lt;/textarea&gt;
+        &lt;/p&gt;
+
+        &lt;p&gt;
+            &lt;label&gt;
+                &lt;input type=&quot;checkbox&quot; name=&quot;practice&quot; value=&quot;yes&quot;&gt;
+                Tôi muốn tham gia buổi thực hành
+            &lt;/label&gt;
+        &lt;/p&gt;
+
+        &lt;button type=&quot;button&quot;&gt;Đăng ký (minh họa)&lt;/button&gt;
+    &lt;/fieldset&gt;
+&lt;/form&gt;</code></pre></div>
+<p><strong>Kết quả:</strong> Form có ô nhập văn bản, email, mật khẩu được che ký tự, danh sách lựa chọn, nút chọn ca học, ô ghi chú và checkbox. Hai radio có cùng <code>name=&quot;session&quot;</code> nên chỉ chọn được một ca.</p>
+<p><strong>Giải thích:</strong> <code>id</code> kết nối trường nhập với <code>label</code>; <code>name</code> đặt tên cho dữ liệu khi gửi form; <code>required</code> đánh dấu trường bắt buộc và <code>minlength</code> quy định độ dài tối thiểu. Nút dùng <code>type=&quot;button&quot;</code> nên chưa gửi dữ liệu. Có thể đổi thành <code>type=&quot;submit&quot;</code> để thử kiểm tra dữ liệu mặc định của trình duyệt, dùng dữ liệu giả; ví dụ này chưa có chức năng lưu đăng ký.</p>
+<h3 id="muc-12">8. Thẻ script và style</h3>
+<div class="table-wrap"><table><thead><tr><th scope="col"> Thẻ</th><th scope="col">Tác dụng </th></tr></thead><tbody>
+<tr><td> <code>&lt;style&gt;</code></td><td>Chứa CSS trong tài liệu HTML (CSS nội bộ). </td></tr>
+<tr><td> <code>&lt;script&gt;</code></td><td>Chứa JavaScript hoặc nạp file JavaScript bên ngoài qua thuộc tính <code>src</code>. </td></tr>
+<tr><td> <code>&lt;link rel=&quot;stylesheet&quot; href=&quot;style.css&quot;&gt;</code></td><td>Liên kết đến file CSS bên ngoài. </td></tr>
+</tbody></table></div>
+<p>Lưu ý: CSS nội tuyến (inline CSS) được viết bằng thuộc tính <code>style</code> trên phần tử, ví dụ <code>&lt;p style=&quot;color: red;&quot;&gt;Xin chào&lt;/p&gt;</code>; khác với CSS nội bộ trong thẻ <code>&lt;style&gt;</code>.</p>
+<p>Nắm chắc các nhóm thẻ trên sẽ giúp bạn xây dựng cấu trúc cho nhiều dạng trang web cơ bản.</p>
+<p><strong>Ví dụ CSS nội bộ:</strong> Đặt thẻ <code>&lt;style&gt;</code> sau vào trong <code>&lt;head&gt;</code> của file HTML.</p>
+<div class="code-block"><div class="code-toolbar"><span>html</span><button class="copy" type="button">Sao chép</button></div><pre><code>&lt;style&gt;
+    h1 {
+        color: blue;
+    }
+&lt;/style&gt;</code></pre></div>
+<p>Đặt nội dung sau trong <code>&lt;body&gt;</code>:</p>
+<div class="code-block"><div class="code-toolbar"><span>html</span><button class="copy" type="button">Sao chép</button></div><pre><code>&lt;h1&gt;Xin chào HTML&lt;/h1&gt;</code></pre></div>
+<p><strong>Kết quả:</strong> Tiêu đề có màu xanh dương.</p>
+<p><strong>Ví dụ CSS ngoài:</strong> Tạo file <code>style.css</code> cùng cấp với <code>index.html</code>:</p>
+<div class="code-block"><div class="code-toolbar"><span>css</span><button class="copy" type="button">Sao chép</button></div><pre><code>p {
+    color: green;
+}</code></pre></div>
+<p>Đặt liên kết sau trong <code>&lt;head&gt;</code>:</p>
+<div class="code-block"><div class="code-toolbar"><span>html</span><button class="copy" type="button">Sao chép</button></div><pre><code>&lt;link rel=&quot;stylesheet&quot; href=&quot;style.css&quot;&gt;</code></pre></div>
+<p>Thêm một đoạn văn vào <code>&lt;body&gt;</code>:</p>
+<div class="code-block"><div class="code-toolbar"><span>html</span><button class="copy" type="button">Sao chép</button></div><pre><code>&lt;p&gt;Đoạn văn được định dạng từ file CSS ngoài.&lt;/p&gt;</code></pre></div>
+<p><strong>Kết quả:</strong> Đoạn văn có màu xanh lá.</p>
+<p><strong>Ví dụ JavaScript:</strong> Đặt đoạn sau trong <code>&lt;body&gt;</code>, với <code>&lt;script&gt;</code> nằm sau nút và đoạn văn để các phần tử đã tồn tại khi mã chạy.</p>
+<div class="code-block"><div class="code-toolbar"><span>html</span><button class="copy" type="button">Sao chép</button></div><pre><code>&lt;button type=&quot;button&quot; id=&quot;hello-button&quot;&gt;Nhấn vào đây&lt;/button&gt;
+&lt;p id=&quot;message&quot;&gt;Chưa có lời chào.&lt;/p&gt;
+
+&lt;script&gt;
+    const button = document.getElementById(&quot;hello-button&quot;);
+    const message = document.getElementById(&quot;message&quot;);
+
+    button.addEventListener(&quot;click&quot;, function () {
+        message.textContent = &quot;Chào mừng bạn đến với lớp học web!&quot;;
+    });
+&lt;/script&gt;</code></pre></div>
+<p><strong>Kết quả:</strong> Khi nhấn nút, nội dung đoạn văn đổi thành lời chào. Chỉ cần quan sát tác dụng của JavaScript ở buổi này; cách xử lý sự kiện sẽ được học kỹ ở các buổi sau.</p>
+<p>Nếu chuyển phần mã bên trong <code>&lt;script&gt;</code> sang file <code>script.js</code> cùng cấp với <code>index.html</code>, thay thẻ script trên bằng:</p>
+<div class="code-block"><div class="code-toolbar"><span>html</span><button class="copy" type="button">Sao chép</button></div><pre><code>&lt;script src=&quot;script.js&quot;&gt;&lt;/script&gt;</code></pre></div>
+<h2 id="muc-13">IV. Tìm hiểu về Block và Inline</h2>
+<p>Block và inline mô tả cách phần tử tham gia bố cục. Các đặc điểm dưới đây áp dụng cho cách hiển thị mặc định trong luồng bố cục thông thường; CSS có thể thay đổi chúng bằng thuộc tính <code>display</code>.</p>
+<div class="table-wrap"><table><thead><tr><th scope="col"> Đặc điểm</th><th scope="col">Block</th><th scope="col">Inline </th></tr></thead><tbody>
+<tr><td> Xuống dòng</td><td>Bắt đầu ở dòng mới.</td><td>Nằm cùng dòng với nội dung khác nếu còn đủ chỗ, có thể ngắt sang dòng mới khi hết chỗ. </td></tr>
+<tr><td> Chiều rộng mặc định</td><td>Thường chiếm toàn bộ chiều rộng khả dụng của phần tử chứa.</td><td>Chiếm không gian theo nội dung. </td></tr>
+<tr><td> Thiết lập <code>width</code>, <code>height</code></td><td>Có thể thiết lập.</td><td>Không áp dụng trực tiếp cho phần tử inline thông thường như <code>&lt;span&gt;</code> và <code>&lt;a&gt;</code>. </td></tr>
+<tr><td> Ví dụ</td><td><code>&lt;div&gt;</code>, <code>&lt;p&gt;</code>, <code>&lt;h1&gt;</code> đến <code>&lt;h6&gt;</code>.</td><td><code>&lt;span&gt;</code>, <code>&lt;a&gt;</code>, <code>&lt;strong&gt;</code>, <code>&lt;em&gt;</code>. </td></tr>
+</tbody></table></div>
+<h3 id="muc-14">Ví dụ</h3>
+<div class="code-block"><div class="code-toolbar"><span>html</span><button class="copy" type="button">Sao chép</button></div><pre><code>&lt;div&gt;Khối thứ nhất&lt;/div&gt;
+&lt;div&gt;Khối thứ hai nằm ở dòng mới&lt;/div&gt;
+
+&lt;span&gt;Nội dung thứ nhất&lt;/span&gt;
+&lt;span&gt;Nội dung thứ hai nằm cùng dòng nếu đủ chỗ&lt;/span&gt;</code></pre></div>
+<p>Lưu ý: <code>&lt;img&gt;</code> mặc định tham gia bố cục inline nhưng là phần tử thay thế (replaced element), nên vẫn có thể thiết lập <code>width</code> và <code>height</code>.</p>
+<p><strong>Kết quả khi chạy ví dụ:</strong> Hai <code>&lt;div&gt;</code> nằm trên hai dòng riêng; hai <code>&lt;span&gt;</code> nằm cùng dòng nếu đủ chỗ. Thử thu hẹp cửa sổ trình duyệt để thấy nội dung inline tự ngắt dòng khi hết chỗ.</p></article><nav class="lesson-pagination" aria-label="Chuyển tuần"><a href="../Lesson1/README.html">← Tuần 1</a><a href="../Lesson3/README.html">Tuần 3 →</a></nav><footer class="footer">HIT CLUB <span>Web Private 2026 · Cùng học, cùng tiến bộ.</span><a href="https://github.com/thienbao28287/WEB_PRIVATE_2026">Xem mã nguồn ↗</a></footer></main><aside class="toc"><span class="eyebrow">TRONG BÀI NÀY</span><nav aria-label="Mục lục bài học"><a class="level-2" href="#muc-1">I. HTML là gì?</a><a class="level-3" href="#muc-2">Viết HTML ở đâu?</a><a class="level-2" href="#muc-3">II. Cấu trúc cơ bản của một file HTML</a><a class="level-2" href="#muc-4">III. Các thẻ cần biết</a><a class="level-3" href="#muc-5">1. Thẻ ngữ nghĩa (Semantic HTML)</a><a class="level-3" href="#muc-6">2. Thẻ tiêu đề và văn bản</a><a class="level-3" href="#muc-7">3. Thẻ định dạng văn bản</a><a class="level-3" href="#muc-8">4. Thẻ liên kết và hình ảnh</a><a class="level-3" href="#muc-9">5. Thẻ danh sách</a><a class="level-3" href="#muc-10">6. Thẻ bảng (Table)</a><a class="level-3" href="#muc-11">7. Thẻ biểu mẫu (Form)</a><a class="level-3" href="#muc-12">8. Thẻ script và style</a><a class="level-2" href="#muc-13">IV. Tìm hiểu về Block và Inline</a><a class="level-3" href="#muc-14">Ví dụ</a></nav></aside></div><button id="top" type="button" aria-label="Về đầu trang" hidden>↑</button></body></html>
