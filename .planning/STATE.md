@@ -18,3 +18,15 @@ Nhánh: main; origin: https://github.com/vanphuoc0443/HIT_WEB.git. Bản nền v
 - Giữ logo chính thức, màu cam, URL, nhãn điều hướng, nội dung lý thuyết, ảnh, code và anchor.
 - Xác minh: 15 trang khớp script sinh HTML; 620 liên kết/assets/anchor hợp lệ; code blocks khớp Markdown; node --check đạt. Chưa browser QA trong phiên này.
 - Môi trường: PowerShell đã ghi được; Python vẫn bị Controlled Folder Access chặn ghi. HTML đã cập nhật bằng PowerShell và so sánh read-only với generator.
+## Web Lab redesign 2026-10-23
+
+- Người dùng yêu cầu overhaul vì giao diện quá nhựa/AI, lỗi nút trống, cần showcase web và tối ưu UI/UX.
+- Design read: trang học web thực hành, typography editorial sans, nền than và cam HIT; DESIGN_VARIANCE 7, MOTION_INTENSITY 6, VISUAL_DENSITY 4.
+- Lỗi gốc: .prose a ghi đè chữ của nút thành cam trên nền cam. Đã sửa bằng .prose a.primary và token --on-accent; kiểm tra computed contrast tối 8.40:1, sáng 6.33:1.
+- Trang chủ riêng, bỏ sidebar lặp; giữ logo, URL, tên tuần và nguồn bài. Hero đi cùng Flexbox playground thật; lộ trình dạng hàng, search không dấu, lọc có tài liệu, trạng thái không tìm thấy/reset, đọc tiếp tuần gần nhất.
+- Animation: entrance, IntersectionObserver reveal một lần, FLIP Web Animations cho Flexbox, hover phản hồi, CSS scroll-driven reading progress. Hỗ trợ reduced motion, không scroll event loop, không thư viện production.
+- Bài đọc: sidebar/mục lục, mục lục mobile, anchor heading, copy có fallback chọn mã, nút về đầu, prev/next rõ ràng.
+- Xác minh: Edge headless 1440/390/320px, 2 theme, no overflow kể cả gap tối đa; các tương tác đạt, không JS errors; 15 trang/672 đường dẫn/assets/anchor hợp lệ; code blocks giữ nguyên.
+- Ảnh desktop/mobile/CTA được kiểm tra trong thư mục visualizations của chat. Không thêm ảnh QA vào repo.
+- Build hỗ trợ --stdout; PowerShell đã ghi 15 trang từ JSON build. Website không cần dependencies; Playwright chỉ dùng cho QA.
+- Chưa push bản redesign trong lượt này.
