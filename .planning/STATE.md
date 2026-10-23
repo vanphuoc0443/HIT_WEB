@@ -41,3 +41,11 @@ Nhánh: main; origin: https://github.com/vanphuoc0443/HIT_WEB.git. Bản nền v
 - Kiểm tra: check_try_it.cjs và check_ui.cjs đạt; viewport desktop/mobile 390/320, sandbox không chạm parent, JS error/reset/focus/keyboard, HTML/CSS/JS và ví dụ linked file chạy được.
 - check_site: 15 trang, 674 link/assets/anchor hợp lệ; toàn bộ code blocks khớp Markdown. node --check đạt.
 - Đã xem screenshot desktop/mobile trong thư mục visualizations. Chưa push tính năng này.
+
+## Footer và control polish 2026-10-23
+
+- Footer dùng chữ GitHub cá nhân / @vanphuoc0443, mô tả bên dưới, link mã nguồn riêng; không logo hay icon trang trí.
+- Giảm mũi tên ở header, CTA, hàng tuần, Markdown, try editor; giữ prev/next mang ý nghĩa điều hướng. Về đầu trang dùng chữ.
+- Control radius 6px; tabs, segmented, filter dùng nền/viền cho selected state, focus/hover rõ ràng; CSS/JS editor và copy/run cùng hệ control.
+- Kiểm tra: check_ui và check_try_it đều đạt; footer đúng link GitHub, không icon trang trí, mobile 320px không tràn; check_site 15 trang/659 liên kết hợp lệ; code Markdown giữ nguyên.
+- Đã xem ảnh footer desktop/mobile; chưa push lần chỉnh sửa này.
