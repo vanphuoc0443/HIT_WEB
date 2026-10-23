@@ -19,7 +19,10 @@ document.querySelectorAll('.copy').forEach(button => button.addEventListener('cl
   setTimeout(() => { button.textContent = 'Sao chép'; }, 2000);
 }));
 const topButton = document.querySelector('#top');
-window.addEventListener('scroll', () => { topButton.hidden = window.scrollY < 500; }, { passive: true });
+if ('IntersectionObserver' in window) {
+  const topObserver = new IntersectionObserver(([entry]) => { topButton.hidden = entry.isIntersecting; });
+  topObserver.observe(document.querySelector('.breadcrumb'));
+}
 topButton.addEventListener('click', () => window.scrollTo({ top: 0, behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth' }));
 const headings = document.querySelectorAll('.prose h2[id], .prose h3[id]');
 if ('IntersectionObserver' in window) {
