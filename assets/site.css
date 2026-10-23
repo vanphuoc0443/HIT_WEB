@@ -334,3 +334,53 @@ tr:last-child td { border:0; }
   .demo-block { width:clamp(44px,16vw,64px);height:clamp(44px,16vw,64px); }
   .lab-head { font-size:10px; }
 }
+/* A deliberately small Try it Yourself workspace. Code remains visible without JS. */
+.code-toolbar>.copy { margin-left:auto;margin-right:15px; }
+.try-button { min-height:44px;color:var(--accent);font:11px var(--mono);padding:8px 0; }
+.try-button:hover { text-decoration:underline;text-underline-offset:4px; }
+.try-open { overflow:hidden; }
+.try-dialog { width:min(1280px,calc(100vw - 48px));height:min(820px,calc(100dvh - 48px));max-width:none;max-height:none;padding:0;border:1px solid var(--line);border-radius:10px;background:var(--bg);color:var(--text);overflow:hidden; }
+.try-dialog[open] { display:flex;flex-direction:column;animation:enter .25s ease-out both; }
+.try-dialog::backdrop { background:rgb(0 0 0 / .72); }
+.try-header { display:flex;justify-content:space-between;align-items:center;gap:20px;padding:18px 25px;border-bottom:1px solid var(--line); }
+.try-header h2 { margin:0;font-size:25px;line-height:1.3;font-weight:600;letter-spacing:-.7px; }
+.try-header h2>span { color:var(--accent); }
+.try-header p { margin:5px 0 0;font-size:12px;color:var(--muted); }
+.try-close { min-height:44px;padding:8px;font-size:12px; }
+.try-close:hover { color:var(--accent); }
+.try-toolbar { display:flex;justify-content:space-between;align-items:center;gap:12px;padding:8px 25px;border-bottom:1px solid var(--line); }
+.try-tabs { display:flex;gap:5px; }
+.try-tabs button { min-height:44px;padding:8px 12px;font:12px var(--mono);color:var(--muted);border-bottom:2px solid transparent; }
+.try-tabs button[aria-selected=true] { color:var(--text);border-bottom-color:var(--accent); }
+.try-actions { display:flex;gap:15px;align-items:center; }
+.try-reset { min-height:44px;font-size:12px;color:var(--muted); }
+.try-run.primary { min-height:42px;padding:7px 15px;gap:20px;font-size:12px; }
+.try-workspace { flex:1;display:grid;grid-template-columns:1fr 1fr;min-height:0; }
+.try-editor { min-width:0;min-height:0;border-right:1px solid var(--line); }
+.try-editor>[role=tabpanel] { height:100%; }
+.try-editor textarea { display:block;resize:none;width:100%;height:100%;min-height:200px;padding:22px;background:var(--surface);color:var(--copy);font:13px/1.9 var(--mono);border:0;border-radius:0;tab-size:4; }
+.try-editor textarea:focus-visible { outline:2px solid var(--accent);outline-offset:-2px; }
+.try-preview { min-width:0;min-height:0;display:flex;flex-direction:column;background:#fff; }
+.try-preview-label { padding:10px 17px;background:var(--surface);color:var(--text);font:11px var(--mono);border-bottom:1px solid var(--line);display:flex;justify-content:space-between;gap:10px; }
+.try-preview-label>span { color:var(--muted);font:10px var(--font); }
+.try-preview iframe { display:block;flex:1;width:100%;min-height:200px;background:#fff;border:0; }
+.try-footer { display:flex;justify-content:space-between;gap:20px;padding:10px 25px;border-top:1px solid var(--line);font-size:11px;color:var(--muted); }
+.try-status { color:var(--accent);white-space:nowrap; }
+.try-error { margin:0;padding:10px 25px;border-top:1px solid var(--accent);color:var(--accent);font:12px/1.7 var(--mono);max-height:90px;overflow:auto;overflow-wrap:anywhere; }
+@media(max-width:767px) {
+  .try-dialog { width:100vw;height:100dvh;border:0;border-radius:0;margin:0; }
+  .try-header { padding:14px 18px; }
+  .try-header h2 { font-size:22px; }
+  .try-toolbar { padding:6px 12px;gap:8px;flex-wrap:wrap; }
+  .try-tabs button { font-size:11px;padding-inline:10px; }
+  .try-actions { margin-left:auto;gap:12px; }
+  .try-workspace { grid-template-columns:1fr;grid-template-rows:1fr 1fr;overflow:auto; }
+  .try-editor { border-right:0;border-bottom:1px solid var(--line); }
+  .try-editor textarea { padding:15px;min-height:160px;font-size:12px; }
+  .try-preview iframe { min-height:160px; }
+  .try-preview-label { padding:8px 14px; }
+  .try-preview-label>span { display:none; }
+  .try-footer { padding:9px 15px;font-size:10px;gap:10px; }
+  .try-footer>span:first-child { max-width:32ch; }
+  .try-error { padding-inline:15px; }
+}
