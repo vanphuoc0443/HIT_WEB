@@ -30,3 +30,14 @@ Nhánh: main; origin: https://github.com/vanphuoc0443/HIT_WEB.git. Bản nền v
 - Ảnh desktop/mobile/CTA được kiểm tra trong thư mục visualizations của chat. Không thêm ảnh QA vào repo.
 - Build hỗ trợ --stdout; PowerShell đã ghi 15 trang từ JSON build. Website không cần dependencies; Playwright chỉ dùng cho QA.
 - Chưa push bản redesign trong lượt này.
+
+## Try it Yourself 2026-10-23
+
+- Theo yêu cầu người dùng: thêm editor đơn giản kiểu W3Schools cho từng ví dụ runnable.
+- assets/try-it.js chỉ tải ở trang có code; bổ sung nút Thử ngay cho HTML/CSS/JS, không bổ sung cho Bash/Git.
+- Native dialog, ba tab textarea có label/keyboard navigation, run/reset, Ctrl/Meta+Enter, iframe preview, lỗi JS, Escape/return focus. Mobile xếp dọc, desktop chia đôi.
+- iframe sandbox chỉ allow-scripts, opaque origin; CSP hạn chế kết nối/form/base, không allow-same-origin; diagnostics chỉ nhận message đúng iframe và token từng lần chạy. Đóng dialog xóa srcdoc để dừng timer.
+- Giữ code gốc trong bài; editor riêng cho phép sửa tạm. Ví dụ link style.css/script.js có companion content; preview dùng tab CSS/JS như nội dung file tương ứng.
+- Kiểm tra: check_try_it.cjs và check_ui.cjs đạt; viewport desktop/mobile 390/320, sandbox không chạm parent, JS error/reset/focus/keyboard, HTML/CSS/JS và ví dụ linked file chạy được.
+- check_site: 15 trang, 674 link/assets/anchor hợp lệ; toàn bộ code blocks khớp Markdown. node --check đạt.
+- Đã xem screenshot desktop/mobile trong thư mục visualizations. Chưa push tính năng này.

@@ -48,3 +48,10 @@ Chế độ này sinh cùng nội dung với lệnh build mặc định.
 `scripts/check_ui.cjs` dùng Playwright có sẵn trong môi trường kiểm thử và Edge headless. Không phải dependency của website. Chạy `node scripts/check_ui.cjs` khi môi trường đã có Playwright trong module search path. Đặt `HIT_QA_DIR` nếu muốn chụp ảnh preview; bỏ qua biến này để chỉ kiểm thử.
 
 Kiểm tra gồm: viewport 1440/390/320px, theme sáng/tối, tương phản chữ nút, tràn ngang, menu mobile/mục lục, Flexbox/gap, tìm kiếm không dấu, lọc/reset, copy code, đọc tiếp, lưu theme và lỗi JavaScript.
+## Thử ngay / Try it Yourself
+
+Trong Tuần 1 và Tuần 2, các khối code HTML/CSS/JavaScript có nút **Thử ngay ↗**. Học viên sửa trong ba tab, nhấn **Chạy** (Ctrl/⌘ + Enter), xem kết quả bên cạnh và có thể **Đặt lại** ví dụ. Esc đóng khung và trả focus về bài học. Mobile xếp phần code trên phần kết quả.
+
+Code chạy trong iframe sandbox riêng, không có quyền truy cập trang bài học; không gửi mã lên server. Các tab CSS/JS được ghép trực tiếp với HTML. Với đoạn tham chiếu `style.css`/`script.js` của bài hiện tại, trình thử chuẩn bị nội dung mẫu tương ứng. Tài nguyên ngoài không được bảo đảm trong editor; lệnh Git/Bash chỉ để đọc và sao chép.
+
+Kiểm thử riêng: `node scripts/check_try_it.cjs` (dùng môi trường Playwright/Edge như bộ QA giao diện). Script kiểm tra cả code sửa được, kết quả tương tác, báo lỗi, sandbox, đặt lại, bàn phím và mobile.
