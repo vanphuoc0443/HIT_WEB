@@ -7,12 +7,12 @@ if (runnableBlocks.length) {
   dialog.className = 'try-dialog';
   dialog.setAttribute('aria-labelledby', 'try-title');
   dialog.innerHTML = `
-    <header class="try-header"><div><h2 id="try-title">Thử ngay<span>.</span></h2><p>Sửa code, nhấn Chạy, xem kết quả.</p></div><button type="button" class="try-close" aria-label="Đóng trình thử code">Đóng ×</button></header>
+    <header class="try-header"><div><h2 id="try-title">Thử ngay<span>.</span></h2><p>Sửa code, nhấn Chạy, xem kết quả.</p></div><button type="button" class="try-close" aria-label="Đóng trình thử code">Đóng</button></header>
     <div class="try-toolbar"><div class="try-tabs" role="tablist" aria-label="Ngôn ngữ chỉnh sửa">
       <button type="button" id="tab-html" role="tab" aria-selected="true" aria-controls="panel-html" data-lang="html">HTML</button>
       <button type="button" id="tab-css" role="tab" aria-selected="false" aria-controls="panel-css" data-lang="css" tabindex="-1">CSS</button>
       <button type="button" id="tab-js" role="tab" aria-selected="false" aria-controls="panel-js" data-lang="js" tabindex="-1">JavaScript</button>
-    </div><div class="try-actions"><button type="button" class="try-reset">Đặt lại</button><button type="button" class="try-run primary">Chạy <span aria-hidden="true">↗</span></button></div></div>
+    </div><div class="try-actions"><button type="button" class="try-reset">Đặt lại</button><button type="button" class="try-run primary">Chạy code</button></div></div>
     <div class="try-workspace"><section class="try-editor" aria-label="Mã nguồn">
       <div id="panel-html" role="tabpanel" aria-labelledby="tab-html"><label class="sr-only" for="edit-html">Mã HTML</label><textarea id="edit-html" spellcheck="false" autocapitalize="off" autocomplete="off" wrap="off"></textarea></div>
       <div id="panel-css" role="tabpanel" aria-labelledby="tab-css" hidden><label class="sr-only" for="edit-css">Mã CSS</label><textarea id="edit-css" spellcheck="false" autocapitalize="off" autocomplete="off" wrap="off"></textarea></div>
@@ -95,7 +95,7 @@ if (runnableBlocks.length) {
   });
   runnableBlocks.forEach(block => {
     const button = document.createElement('button');
-    button.type = 'button';button.className = 'try-button';button.textContent = 'Thử ngay ↗';
+    button.type = 'button';button.className = 'try-button';button.textContent = 'Thử ngay';
     button.setAttribute('aria-haspopup', 'dialog');
     block.querySelector('.code-toolbar').append(button);
     button.addEventListener('click', () => {

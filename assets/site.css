@@ -384,3 +384,52 @@ tr:last-child td { border:0; }
   .try-footer>span:first-child { max-width:32ch; }
   .try-error { padding-inline:15px; }
 }
+/* Shared control language: quiet borders, clear labels, one consistent geometry. */
+:root { --control-radius:6px; }
+button,a,input { touch-action:manipulation; }
+.primary,.prose a.primary { border-radius:var(--control-radius);gap:16px;min-width:132px;justify-content:center;transition:background .2s,transform .2s; }
+#theme { border-radius:var(--control-radius);font-family:var(--font);font-size:12px;min-width:62px; }
+.search { border-radius:var(--control-radius);padding-inline:16px;transition:border-color .2s,background .2s; }
+.search:focus-within { background:var(--bg); }
+.search input { font-size:14px; }
+.search>span:last-child { border:1px solid var(--line);padding:1px 6px;border-radius:3px;font-size:11px; }
+.segmented,.lesson-filter { border:1px solid var(--line);border-radius:var(--control-radius);padding:3px;background:var(--surface);gap:3px; }
+.segmented button,.lesson-filter button { border:0;border-radius:4px;min-height:38px;transition:background .2s,color .2s; }
+.segmented button[aria-pressed=true],.lesson-filter button[aria-pressed=true] { background:var(--surface2);color:var(--text);box-shadow:inset 0 0 0 1px var(--line); }
+.segmented button:hover,.lesson-filter button:hover { background:var(--surface2);box-shadow:none; }
+.lesson-filter button { padding:8px 14px;font-size:12px; }
+.row-action { font-size:12px; }
+.lesson-row:hover .row-action { color:var(--accent); }
+.copy,.try-button { padding-inline:10px;margin-block:5px;min-height:36px;border-radius:4px;transition:background .2s,color .2s; }
+.copy:hover,.try-button:hover { background:var(--surface2);text-decoration:none; }
+.code-toolbar>.copy { margin-right:2px; }
+.try-tabs { gap:4px; }
+.try-tabs button { border-bottom:0;border-radius:4px;min-height:38px;padding:8px 13px;transition:background .2s,color .2s; }
+.try-tabs button[aria-selected=true] { background:var(--surface2);color:var(--text);box-shadow:inset 0 0 0 1px var(--line); }
+.try-tabs button:hover { background:var(--surface); }
+.try-close,.try-reset { padding-inline:12px;border-radius:var(--control-radius);transition:background .2s,color .2s; }
+.try-close:hover,.try-reset:hover { background:var(--surface2);color:var(--text); }
+.try-run.primary { min-width:96px;padding-inline:17px; }
+#top { border-radius:var(--control-radius);font-size:11px;min-width:74px;padding-inline:12px; }
+/* Footer: a personal signature with a quiet project link, no substitute logo. */
+.footer { display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:start;gap:28px;padding:38px 0 34px; }
+.footer-identity { display:flex;flex-direction:column;align-items:flex-start;gap:8px;min-width:0; }
+.footer-label { color:var(--muted);font-size:11px;font-weight:450;letter-spacing:.2px; }
+.footer-profile { color:var(--text);font-size:clamp(20px,2vw,27px);font-weight:600;line-height:1.4;letter-spacing:-.65px;text-decoration:none;text-underline-offset:7px;transition:color .2s; }
+.footer-profile:hover { color:var(--accent);text-decoration:underline;text-decoration-thickness:1px; }
+.footer-identity p { font-size:12px;line-height:1.8;margin-top:3px; }
+.footer-project { display:flex;flex-direction:column;align-items:flex-end;gap:11px;padding-top:2px; }
+.footer-source { min-height:42px;display:inline-flex;align-items:center;padding:8px 14px;border:1px solid var(--line);border-radius:var(--control-radius);font-size:12px;color:var(--copy);transition:border-color .2s,background .2s; }
+.footer-source:hover { border-color:var(--muted);background:var(--surface); }
+@media(max-width:767px) {
+  .lesson-row { grid-template-columns:36px minmax(0,1fr); }
+  .row-action { display:none; }
+  .lesson-filter { align-self:flex-start; }
+  .lesson-filter button { min-height:38px; }
+  .footer,.lesson-page .footer { display:grid;grid-template-columns:1fr;gap:24px;padding-block:30px; }
+  .footer-project { align-items:flex-start;gap:9px; }
+  .footer-identity p { order:initial;flex-basis:auto;font-size:12px; }
+  .footer-profile { font-size:24px; }
+  .try-run.primary { min-width:88px; }
+  .try-toolbar { gap:6px; }
+}

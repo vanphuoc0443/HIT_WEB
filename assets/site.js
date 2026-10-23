@@ -65,7 +65,7 @@ document.querySelectorAll('.copy').forEach(button => {
     const code = button.closest('.code-block').querySelector('code');
     try {
       await navigator.clipboard.writeText(code.textContent);
-      button.textContent = 'Đã sao chép ✓';
+      button.textContent = 'Đã sao chép';
     } catch {
       const selection = window.getSelection();
       const range = document.createRange();
